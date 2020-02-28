@@ -6,8 +6,8 @@ store(&BITMAP) 'xinaliq.ico'
 store(&LANGUAGE) 'x042C'
 store(&TARGETS) 'any'
 store(&LAYOUTFILE) 'xinaliq.keyman-touch-layout'
-store(&NAME) 'Kətiş (Xınalıq)'
 store(&VISUALKEYBOARD) 'xinaliq.kvks'
+store(&NAME) 'Xinaliq'
 begin Unicode > use(main)
 
 group(main) using keys 
@@ -26,166 +26,203 @@ platform('touch') any(word) any(final) + U+0020 > index(word,2) index(final,3) "
 platform('touch') any(word) U+0020 + [K_SPACE] > index(word,2) U+002E " " layer('shift')
 
 c keyboard assignments peculiar to the Azeri keyboard
-
-+ 'H' > 'H'
-+ 'h' > 'h'
-+ 'C' > 'C'
-+ 'c' > 'c'
-+ "W" > "Ü"
-+ "w" > "ü"
-+ 'T' > 'T'
-+ 't' > 't'
-+ 'P' > 'P'
-+ 'p' > 'p'
-+ 'K' > 'K'
-+ 'k' > 'k'
+c top row QWERTY layout
 + 'Q' > 'Q'
 + 'q' > 'q'
-+ 'G' > 'G'
-+ 'g' > 'g'
-c + "]" > "ğ"
-c + "}" > "Ğ"
-+ 'S' > 'S'
-+ 's' > 's'
-+ 'Z' > 'Z'
-+ 'z' > 'z'
-c + "," > "ç"
-c + "<" > "Ç"
-c + "." > "ş"
-c + ">" > "Ş"
-+ 'O' > 'O'
-+ 'o' > 'o'
-c + "{"  > "Ö"
-c + "["  > "ö"
-+ 'I' > 'I'
-+ 'i' > 'i'
-c + ";" > "ı"
-c + ":" > "I"
++ "W" > "Ü"
++ "w" > "ü"
 + 'E' > 'E'
 + 'e' > 'e'
-c + "'" > "ə"
-c + '"' > 'Ə'
-+ 'x' > 'x'
-+ 'X' > 'X'
-c + "/" > "."
-c + "?" > ","
-c + "@" > '"'
++ 'R' > 'R'
++ 'r' > 'r'
++ 'T' > 'T'
++ 't' > 't'
++ 'Y' > 'Y'
++ 'y' > 'y'
 + 'U' > 'U'
 + 'u' > 'u' 
-
-c rota based on punctuation
-"'" + "'" > '«'
-'«' + "'" > "'"
-U+0022  + U+0022  > '»'     c double quote
-'»' + U+0022  > U+0022  	c double quote 
++ 'I' > 'I'
++ 'i' > 'i'
++ 'O' > 'O'
++ 'o' > 'o'
++ 'P' > 'P'
++ 'p' > 'p'
++ "{"  > "Ö"
++ "["  > "ö"
++ "]" > "ğ"
++ "}" > "Ğ"
++ '\' > '\'
+c middle row QWERTY layout
++ 'A' > 'A' 
++ 'a' > 'a'
++ 'S' > 'S'
++ 's' > 's'
++ 'D' > 'D'
++ 'd' > 'd'
++ 'F' > 'F'
++ 'f' > 'f'
++ 'G' > 'G'
++ 'g' > 'g'
++ 'H' > 'H'
++ 'h' > 'h'
++ 'J' > 'J'
++ 'j' > 'j'
++ 'K' > 'K'
++ 'k' > 'k'
++ 'L' > 'L'
++ 'l' > 'l'
++ ";" > "ı"
++ ":" > "I"
++ "'" > "ə"
++ '"' > 'Ə'
++ 'Z' > 'Z'
++ 'z' > 'z'
++ 'x' > 'x'
++ 'X' > 'X'
++ 'C' > 'C'
++ 'c' > 'c'
++ 'V' > 'V'
++ 'v' > 'v'
++ 'B' > 'B'
++ 'b' > 'b'
++ 'N' > 'N'
++ 'n' > 'n'
++ 'M' > 'M'
++ 'm' > 'm'
++ "," > "ç"
++ "<" > "Ç"
++ "." > "ş"
++ ">" > "Ş"
++ "/" > "."
++ "?" > ","
 
 c continuation of key assignments peculiar to the Azeri keyboard
-c + "#" > "№"
-c + "$" > ";"
-c + "%" > "%"
-c + "^" > ":"
-c + "&" > "?"
-c + "*" > "*" 
+
++ "1" > "1"
++ "2" > "2"
++ "3" > "3"
++ "4" > "4"
++ "5" > "5"
++ "6" > "6"
++ "7" > "7"
++ "8" > "8"
++ "9" > "9"
++ "0" > "0"
++ '_' > '_'
++ '-' > '-'
++ '+' > '+'
++ '=' > '='
++ '~' > '~'
++ "!" > "!"
++ "@" > "№"
++ "#" > U+0022
++ "$" > ";"
++ "%" > "%"
++ "^" > ":"
++ "&" > "?"
++ "*" > "*"
++ '(' > '('
++ ')' > ')'
++ '|' > '|'
+
+c diacritics
++ "`" > U+0307
+U+0307 + "`" > U+0302
  
 c ***lowercase consonants****
 
-'g' + 'g' > 'ğ'         	c breve
-'g' + 'g' > 'ğg'        	c breve and soft g
-'ğg' + 'g' > 'ĝ'            c circumflex
-'ĝ' + 'g' > 'g'
+'g' + 'g' > 'ĝ'             c circumflex
+'ĝ' + 'g' > 'g'             c reverts to base character 'g'
 
-'k' + 'k' > 'k̇'        	   	c dot above 
-'k̇' + 'k' > 'k̂'       	   	c circumflex
-'k̂' + 'k' > 'k̂k̂'     	c doubled circumflex
-'k̂k̂' + 'k' > 'k'
+'k' + 'k' > 'k̇'        	 c dot above 
+'k̇' + 'k' > 'k̂'       	  c circumflex
+'k̂' + 'k' > 'k̂k̂'     	   c doubled circumflex
+'k̂k̂' + 'k' > 'k'            c reverts to base character 'k'
 
 'q' + 'q' > 'q' U+0307      c dot above 
-'q̇' + 'q' > 'q̂'            c circumflex
-'q̂' + 'q' > 'q̂q̂'     	c doubled circumflex
-'q̂q̂' + 'q' > 'q' 
+'q̇' + 'q' > 'q̂'             c circumflex
+'q̂' + 'q' > 'q̂q̂'     	   c doubled circumflex
+'q̂q̂' + 'q' > 'q'            c reverts to base character 'q'
 
 'p' + 'p' > 'ṗ'             c dot above
-'ṗ' + 'p' > 'p̂'            c circumflex
-'p̂' + 'p' > 'p̂p̂'         c doubled circumflex
-'p̂p̂' + 'p' > 'p' 
+'ṗ' + 'p' > 'p̂'             c circumflex
+'p̂' + 'p' > 'p̂p̂'            c doubled circumflex
+'p̂p̂' + 'p' > 'p'            c reverts to base character 'p'
 
 't' + 't' > 'ṫ'             c dot above
-'ṫ' + 't' > 't̂'            c circumflex
-'t̂' + 't' > 't̂t̂'         c doubled circumflex
-'t̂t̂' + 't' > 'tt'         c doubled "t"
-'tt' + 't' > 't'
+'ṫ' + 't' > 't̂'             c circumflex
+'t̂' + 't' > 't̂t̂'            c doubled circumflex
+'t̂t̂' + 't' > 'tt'           c doubled 't'
+'tt' + 't' > 't'            c reverts to base character 't'
 
-'s' + 's' > 'ss'            c doubled "s"
+'s' + 's' > 'ss'            c doubled 's'
 'ss' + 's' > 'ŝ'            c circumflex
-'ŝ' + 's' > 'ş'
-'ş' + 's' > 's'
+'ŝ' + 's' > '̂ss'            c circumflex 's' and 's'
+'̂ss' + 's' > 's'            c reverts to base character 's'
 
 'z' + 'z' > 'ż'             c dot above
 'ż' + 'z' > 'ẑ'             c circumflex
-'ẑ' + 'z' > 'z'
+'ẑ' + 'z' > 'z'             c reverts to base character 'z'
 
 'c' + 'c' > 'ċ'             c dot above
 'ċ' + 'c' > 'ĉ'             c circumflex
 'ĉ'+ 'c' > 'ĉĉ'             c doubled circumflex
-'ĉĉ' + 'c' > 'ç'
-'ç' + 'c' > 'c'
+'ĉĉ' + 'c' > 'c'            c reverts to base character 'c'
 
 'h' + 'h' > 'ḣ'             c dot above
 'ḣ' + 'h' > 'ĥ'             c circumflex
-'ĥ' + 'h' > 'h'
+'ĥ' + 'h' > 'h'             c reverts to base character 'h'
 
-'x' + 'x' > 'x̂'           c circumflex
-'x̂' + 'x' > 'x'
+'x' + 'x' > 'x̂'             c circumflex
+'x̂' + 'x' > 'x'             c reverts to base character 'x'
 
 c ***uppercase consonants****
 
-'G' + 'G' > 'Ğ'         C BREVE
-'G' + 'G' > 'ĞG'        C BREVE AND SOFT G
-'ĞG' + 'G' > 'Ĝ'
-'Ĝ' + 'G' > 'G'
 
-'K' + 'K' > 'K̇'        	C DOT ABOVE 
-'K̇' + 'K' > 'K̂'       	C CIRCUMFLEX
-'K̂' + 'K' > 'K̂K̂'     C DOUBLED CIRCUMFLEX
-'K̂K̂' + 'K' > 'K'
+'G' + 'G' > 'Ĝ'             c circumflex
+'Ĝ' + 'G' > 'G'             C REVERTS TO BASE CHARACTER  'G'
 
-'Q' + 'Q' > 'Q' U+0307  C DOT ABOVE 
-'Q̇' + 'Q' > 'Q̂'        C CIRCUMFLEX
-'Q̂' + 'Q' > 'Q̂Q̂'     C DOUBLED CIRCUMFLEX
-'Q̂Q̂' + 'Q' > 'Q' 
+'K' + 'K' > 'K̇'        	 C DOT ABOVE 
+'K̇' + 'K' > 'K̂'       	  C CIRCUMFLEX
+'K̂' + 'K' > 'K̂K̂'            C DOUBLED CIRCUMFLEX
+'K̂K̂' + 'K' > 'K'            C REVERTS TO BASE CHARACTER 'K'
 
-'P' + 'P' > 'Ṗ'         C DOT ABOVE
-'Ṗ' + 'P' > 'P̂'        C CIRCUMFLEX
-'P̂' + 'P' > 'P̂P̂'     C DOUBLED CIRCUMFLEX
-'P̂P̂' + 'P' > 'P' 
+'Q' + 'Q' > 'Q' U+0307      C DOT ABOVE 
+'Q̇' + 'Q' > 'Q̂'             C CIRCUMFLEX
+'Q̂' + 'Q' > 'Q̂Q̂'            C DOUBLED CIRCUMFLEX
+'Q̂Q̂' + 'Q' > 'Q'            C REVERTS TO BASE CHARACTER 'Q'
 
-'T' + 'T' > 'Ṫ'         C DOT ABOVE
-'Ṫ' + 'T' > 'T̂'		C CIRCUMFLEX
-'T̂' + 'T' > 'T̂T̂'		C DOUBLED CIRCUMFLEX
-'T̂T̂' + 'T' > 'TT'		C DOUBLED T
-'TT' + 'T' > 'T'
+'P' + 'P' > 'Ṗ'             C DOT ABOVE
+'Ṗ' + 'P' > 'P̂'             C CIRCUMFLEX
+'P̂' + 'P' > 'P̂P̂'            C DOUBLED CIRCUMFLEX
+'P̂P̂' + 'P' > 'P'            C REVERTS TO BASE CHARACTER 'P'
 
-'S' + 'S' > 'SS'		C DOUBLED S	
-'SS' + 'S' > 'Ŝ'        C CIRCUMFLEX
-'Ŝ' + 'S' > 'Ş'         C CEDILLA "ESH"
-'Ş' + 'S' > 'S'
+'T' + 'T' > 'Ṫ'            C DOT ABOVE
+'Ṫ' + 'T' > 'T̂'		     C CIRCUMFLEX
+'T̂' + 'T' > 'T̂T̂'		      C DOUBLED CIRCUMFLEX
+'T̂T̂' + 'T' > 'TT'		     C DOUBLED T
+'TT' + 'T' > 'T'           C REVERTS TO BASE CHARACTER 'T'
 
-'Z' + 'Z' > 'Ż'         C DOT ABOVE
-'Ż' + 'Z' > 'Ẑ'         C CIRCUMFLEX
-'Ẑ' + 'Z' > 'Z'
+'S' + 'S' > 'SS'           C DOUBLED 'S'
+'SS' + 'S' > 'Ŝ'           C CIRCUMFLEX
+'Ŝ' + 'S' > '̂SS'           C CIRCUMFLEX 'S' AND 'S'
+'̂SS' + 'S' > 'S'           C REVERTS TO BASE CHARACTER  'S'
 
-'C' + 'C' > 'Ċ'         C DOT ABOVE
-'Ċ' + 'C' > 'Ĉ'         C CIRCUMFLEX
-'Ĉ'+ 'C' > 'ĈĈ'         C DOUBLED CIRCUMFLEX
-'ĈĈ' + 'C' > 'Ç'        C CEDILLA
-'Ç' + 'C' > 'C'
+'Z' + 'Z' > 'Ż'            C DOT ABOVE
+'Ż' + 'Z' > 'Ẑ'            C CIRCUMFLEX
+'Ẑ' + 'Z' > 'Z'            C REVERTS TO BASE CHARACTER 'Z'
 
-'H' + 'H' > 'Ḣ'         C DOT ABOVE
-'Ḣ' + 'H' > 'Ĥ'         C CIRCUMFLEX
-'Ĥ' + 'H' > 'H'
+'C' + 'C' > 'Ċ'  	        C DOT ABOVE
+'Ċ' + 'C' > 'Ĉ' 	         C CIRCUMFLEX
+'Ĉ'+ 'C' > 'ĈĈ' 	          C DOUBLED CIRCUMFLEX
+'ĈĈ' + 'C' > 'C' 	         C REVERTS TO BASE CHARACTER  'C'
 
-'X' + 'X' > 'X̂'        C CIRCUMFLEX
-'X̂' + 'X' > 'X'
+'H' + 'H' > 'Ḣ'            C DOT ABOVE
+'Ḣ' + 'H' > 'Ĥ'            C CIRCUMFLEX
+'Ĥ' + 'H' > 'H'            C REVERTS TO BASE CHARACTER 'H'
+
+'X' + 'X' > 'X̂'            C CIRCUMFLEX
+'X̂' + 'X' > 'X'            C REVERTS TO BASE CHARACTER 'X'
 
 c ***lowercase vowels***
 
